@@ -5,13 +5,11 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.ui.AppBarConfiguration
 import androidx.preference.PreferenceManager
 import com.divyanshu.preferenceapp.databinding.ActivityMainScreenBinding
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainScreenBinding
     private val preferences by lazy {
         PreferenceManager.getDefaultSharedPreferences(this)

@@ -20,7 +20,7 @@ class SettingsActivity : AppCompatActivity(), SharedPreferences.OnSharedPreferen
         }
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         PreferenceManager.getDefaultSharedPreferences(this)
-            .registerOnSharedPreferenceChangeListener(this);
+            .registerOnSharedPreferenceChangeListener(this)
     }
 
 
@@ -43,6 +43,6 @@ class SettingsActivity : AppCompatActivity(), SharedPreferences.OnSharedPreferen
     override fun onDestroy() {
         super.onDestroy()
         PreferenceManager.getDefaultSharedPreferences(this)
-            .unregisterOnSharedPreferenceChangeListener(this);
+            .unregisterOnSharedPreferenceChangeListener(this)
     }
 }
