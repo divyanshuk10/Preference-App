@@ -1,0 +1,48 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="@string/messages_header">
+
+        <EditTextPreference
+            app:key="signature"
+            app:title="@string/signature_title"
+            app:useSimpleSummaryProvider="true" />
+        <PreferenceCategory android:title="Preference category">
+            <CheckBoxPreference
+                android:defaultValue="false"
+                android:key="check_box_preference"
+                android:title="Check box preference" />
+        </PreferenceCategory>
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="Basics">
+
+        <SwitchPreferenceCompat
+            app:key="switch"
+            app:summary="Switch to on/off"
+            app:title="Switch Preference" />
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="Advanced">
+        <ListPreference
+            android:entries="@array/dark_mode_entries"
+            android:entryValues="@array/dark_mode_entries_values"
+            android:title="Dark Mode"
+            app:defaultValue="0"
+            app:key="theme_mode"
+            app:useSimpleSummaryProvider="true" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Link">
+        <Preference
+            android:key="renameCourses"
+            android:summary="Click to open the link">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://www.google.com"
+                app:action="android.intent.action.VIEW"
+                app:data="https://www.google.com" />
+        </Preference>
+
+    </PreferenceCategory>
+</PreferenceScreen>
